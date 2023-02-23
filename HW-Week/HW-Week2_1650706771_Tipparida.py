@@ -1,0 +1,36 @@
+from tkinter import *
+from turtle import title
+def createwindow() :
+    root = Tk()
+    root.title("HW-Week2#1:Create Basic GUI using grid geometry")
+    root.geometry("550x400")
+    root.configure(bg="#F2DEBA")
+    root.option_add('*font','Helvetica 15')
+    root.grid_columnconfigure((0,1),weight=1)
+    return(root)
+
+def createwidget(root) :
+    title = Label(root,text="Find average of 3 numbers Program",bg="#F2DEBA",fg="#4E6C50")
+    title.grid(row=0,column=0,pady=20,columnspan=1)
+    tag1 = Label(root,text="Number1 : ",bg="#FDA769")
+    tag1.grid(row=1,column=0,pady=5)
+    box1 = Entry(root,width=10)
+    box1.grid(row=1,column=1,pady=5)
+    tag2 = Label(root,text="Number2 : ",bg="#ABC270")
+    tag2.grid(row=2,column=0,pady=5)
+    box2 = Entry(root,width=10)
+    box2.grid(row=2,column=1,pady=5)
+    tag3 = Label(root,text="Number3 : ",bg="#FF7B54")
+    tag3.grid(row=3,column=0,pady=5)
+    box3 = Entry(root,width=10)
+    box3.grid(row=3,column=1,pady=5)
+    button1 = Button(root,text="Reset",width=13,bg="#DBE6FD")
+    button1.grid(row=4,column=0,pady=5)
+    button2 = Button(root,text="Find Average",width=13,bg="#DBE6FD")
+    button2.grid(row=4,column=1,pady=5)
+    endtxt = Label(root,text="Created by tipparida rujisunkuntorn, ID : 1650706771",bg="#F2DEBA",fg="#4E6C50")
+    endtxt.grid(row=5,column=0,padx=10)
+
+root = createwindow()
+createwidget(root)
+root.mainloop()
